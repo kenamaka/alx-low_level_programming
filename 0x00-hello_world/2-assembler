@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S "$CFILE" -o "${CFILE%.c}.s" && echo "Assembly code generated. Saved as $OUTPUT_FILE"
+gcc -S "$CFILE" -o "${CFILE%.c}.s"
