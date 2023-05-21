@@ -2,13 +2,15 @@
 #include <string.h>
 
 /**
- * main - Entry point of the program
- *
+ * main - Prints a quote to the standard error.
  * Return: Always 1
  */
 int main(void)
 {
-	const char *message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	write(2, message, strlen(message));
+	char *quote = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	int len = strlen(quote);
+
+	write(2, quote, len);
+
 	return (1);
-} 
+}
