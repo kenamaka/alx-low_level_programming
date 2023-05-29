@@ -1,35 +1,27 @@
 #include <stdio.h>
 
 /**
- * main - Prints the Fibonacci sequence up to 91 terms
- *        with no hardcoding
+ * main - Prints the first 98 Fibonacci numbers
+ * starting with 1 and 2, separated by comma and space
  * Return: Always 0
  */
 int main(void)
 {
-    unsigned long int i;
-    unsigned long int bef = 1;
-    unsigned long int aft = 2;
-    unsigned long int bef1;
-    unsigned long int bef2;
-    unsigned long int aft1;
-    unsigned long int aft2;
+    int count;
+    unsigned long fib1 = 1, fib2 = 2, fib3;
 
-    printf("%lu", bef);
+    printf("%lu, %lu", fib1, fib2);
 
-    for (i = 1; i < 91; i++)
+    for (count = 3; count <= 98; count++)
     {
-        printf(", %lu", aft);
-        aft += bef;
-        bef = aft - bef;
+        fib3 = fib1 + fib2;
+        printf(", %lu", fib3);
+
+        fib1 = fib2;
+        fib2 = fib3;
     }
 
-    bef1 = (bef / 1000000000);
-    bef2 = (bef % 1000000000);
-    aft1 = (aft / 1000000000);
-    aft2 = (aft % 1000000000);
+    printf("\n");
 
-    printf("%lu%09lu, %lu%09lu\n", bef1, bef2, aft1, aft2);
-
-    return (0);
+    return 0;
 }
